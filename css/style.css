@@ -10,7 +10,360 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
-.container {
-    width: 1050;
+.container { /* kontener dla strony */
+    width: 1050px;
     margin: 0 auto;
 }
+
+.visuallyhidden { /* ukrywa labele */
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+.btn{
+    border: 0;
+    color: #fff;
+    background: var(--color);
+    padding: 20px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 7px;
+}
+
+.section-title {
+    color: #575757;
+    font-size: 22px;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 15px;
+
+}
+
+.section-title:after {
+    content: "";
+    display: block;
+    width: 315px;
+    height: 8px;
+    bafground: var(--color);
+    position:absolute;
+    left:0;
+    bottom:0;
+}
+
+/*************************/
+/* PAGE HEADER*/
+/*************************/
+.page-header {
+    height: 40px;
+    background-color: black;
+    position: relative;
+    z-index: 10000;
+}
+
+.page-header .container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-logo {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.page-logo span {
+    color: var(--color);
+}
+
+.page-nav{}
+
+.page-nav-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.page-nav-list-el{
+    position: relative;
+}
+
+.page-nav-list-link{
+    padding: 0 15px;
+    line-height: 40px;
+    display: block;
+    text-decoration:none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size:14px;
+}
+
+.page-nav-list-link:hover {
+    color: var(--color);
+}
+
+.page-nav-sublist {
+    list-style: none;
+    margin: 0;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: black;
+    padding: 10px;
+
+    /*display: none; /* ukrywa listę */
+
+    /*PŁYNNE TRANSITION */
+    opacity:0;
+    visibility: hidden;
+    transition: 0.5s opacity;
+
+}
+
+/* ROZWIJANIE SIĘ LISTY */
+.page-nav-list-el:hover .page-nav-sublist{
+
+    /*display: block; /* odkrywa listę */
+
+    /*PŁYNNE TRANSITION */
+    opacity: 1;
+    visibility: visible;
+}
+
+/* PODŚWITLA LINK PO NAJECHANIU */
+.page-nav-list-el:hover .page-nav-list-link{
+    color: var(--color);
+}
+
+
+.page-nav-sublist-link:hover {
+    color: var(--color);
+}
+
+.page-nav-sublist:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    display: block;
+
+    border: 10px solid transparent; /* tworzenie trójkąta */
+    border-bottom-color: black;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+
+.page-nav-sublist:after{
+    content: "";
+    background: transparent;
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    top: -20px;
+}
+
+.page-nav-sublist-el{}
+
+.page-nav-sublist-link{
+    text-decoration:none;
+    color: #fff;
+    line-height: 1.5em;
+}
+
+/**************************/
+/* BANNER                 */
+/**************************/
+
+.main-banner{
+    background: linear-gradient(#fff , #cecece);
+}
+
+.banner{
+    height: 500px;
+    display: flex;
+}
+
+.banner-prev,
+.banner-next{
+    width:60px;
+    background: none;
+    border: 0px;
+    font-size: 70px;
+    color: var(--color);
+}
+
+.banner-next {
+    order: 1;
+}
+/* wygaszenie ramek najechania na strzałki*/
+.banner-prev:focus,
+.banner-next:focus {
+    outline: none;
+
+}
+
+.banner-slides{
+    flex-grow: 1;
+    position: relative;
+}
+.banner-slide{
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+    transition: 0.5s all;
+    font-size: 100px;
+}
+
+.banner-slide-active {
+    opacity: 1;
+    z-index: 1;
+}
+/**************************/
+/* PICTURES                */
+/**************************/
+.main-pricing{
+    background: #f1f1f1;
+}
+
+
+.pictures {
+    height: 250px;
+    display: flex;
+}
+
+
+/**************************/
+/* PRICING                 */
+/**************************/
+
+.pricing {
+    height: 500px;
+    display: flex;
+}
+
+.pricing-banners {
+    border: 1px solid black;
+}
+
+/**************************/
+/* FORM                 */
+/**************************/
+
+.form{
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-left{
+    width: 630px;
+}
+.form-right{
+    width: 340px;
+}
+.form-row{
+    margin-bottom: 28px;
+}
+/*<!--checkbox-->*/
+.form-addition{
+    height: 200px;
+    background: url(../images/red_chair.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    margin-top: -25px;
+}
+.form-control{
+    height: 63px;
+    border: 1px solid var(--color);
+    width: 100%;
+    padding: 0 15px;
+    font-size:33px;
+    font-weight: 300;
+    font-family: 'Raleway', sans-serif;
+}
+
+textarea.form-control {
+    height: 150px;
+    resize: none;
+    padding: 15px;
+}
+
+.form-control::placeholder {
+    color: #cecece;;
+}
+
+.form-control:focus { /*cieniowanie ramki
+    outline:none;
+    border-color: var(--color);
+    box-shadow: inset 0 0 0 1px var(--color) /*inset - robi węwnętrzny cień*/
+}
+
+.form-checkbox {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin: 35px 0;
+    color: #cecece;
+    font-size: 18px;
+
+}
+
+.form-checkbox-input{
+    position: absolute;
+    left:-99999px;
+}
+
+.form-checkbox-mark{
+    display: block;
+    width:50px;
+    height: 50px;
+    flex-shrink:0;
+    border: 1px solid var(--color);
+    margin-right: 10px;
+
+}
+
+.form-checkbox-input:checked + .form-checkbox-mark{
+    background: url(../images/form_ok.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.form-submit-btn {
+    width: 100%;
+    font-size: 34px;
+    font-weight: bold;
+    padding: 20px;
+}
+
+/*************************/
+/* FOOTER*************/
+/*************************/
+
+.footer {
+    height: 40px;
+    background-color: black;
+    position: relative;
+    z-index: 10000;
+}
+

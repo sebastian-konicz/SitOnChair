@@ -6,14 +6,183 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600,700&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
     <link rel="stylesheet" href="normalize.css">
+
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
 
 <body>
+<!----------------------->
+<!-HEADER-->
+<!----------------------->
 
+    <header class="page-header">
+        <div class="container">
+            <a href="/" class="page-logo">
+                Sit <span>on</span> chair
+            </a>
+
+            <nav class="page-nav">
+                <ul class="page-nav-list">
+                    <li class="page-nav-list-el">
+                        <a href="" class="page-nav-list-link">O firmie</a>
+
+                        <ul class="page-nav-sublist">
+                            <li class="page-nav-sublist-el">
+                                <a href="" class="page-nav-sublist-link">Aktualności</a>
+                            </li>
+                            <li class="page-nav-sublist-el">
+                                <a href="" class="page-nav-sublist-link">Nasz team</a>
+                            </li>
+                            <li class="page-nav-sublist-el">
+                                <a href="" class="page-nav-sublist-link">Historia</a>
+                            </li>
+                        </ul>
+
+                    </li>
+                    <li class="page-nav-list-el">
+                        <a href="" class="page-nav-list-link">Galeria</a>
+                    </li>
+                    <li class="page-nav-list-el">
+                        <a href="" class="page-nav-list-link">Kontakt</a>
+                    </li>
+
+                </ul>
+
+            </nav>
+        </div>
+    </header>
+
+<!----------------------->
+<!--BANNER-->
+<!----------------------->
+
+    <section class="main-banner">
+        <div class="container">
+            <div class="banner" id="banner">
+                <button type="button" class="banner-prev">
+                    <i class="fas fa-angle-left"></i>
+                </button>
+
+                <button type="button" class="banner-next">
+                    <i class="fas fa-angle-right"></i>
+                </button>
+                <div class="banner-slides">
+                    <div class="banner-slide banner-slide-active">slide 1</div>
+                    <div class="banner-slide">slide 2</div>
+                    <div class="banner-slide">slide 3</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!----------------------->
+<!--PICTURES-->
+<!----------------------->
+
+<section class="main-pictures">
+    <div class="container">
+        <div class="pictures" id="pictures">
+            <h2 class="section-title">Galeria</h2>
+        </div>
+    </div>
+</section>
+
+<!----------------------->
+<!--PRICING-->
+<!----------------------->
+
+    <section class="main-pricing">
+    <div class="container">
+        <div class="pricing" id="pricing">
+            <h2 class="section-title">Cennik</h2>
+
+            <!--bannery-->
+            <div class="pricing-banners">
+                <div class="pricing-banners-el"></div>
+                <div class="pricing-banners-el"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!----------------------->
+<!--CONTACT-FORM-->
+<!----------------------->
+
+    <section class="main-contact">
+        <div class="container">
+            <h2 class="section-title">Kontakt</h2>
+            <form class="form">
+
+                <!--LEWA KOLUMNA-->
+                <div class="form-left">
+
+                    <!--imię-->
+                    <div class="form-row">
+                      <label class="visuallyhidden" for="name">Imię</label>
+                      <input class="form-control" type="text" name="name" id="name" placeholder="Imię">
+                    </div>
+
+                    <!--email-->
+                    <div class="form-row">
+                      <label class="visuallyhidden" for="email">Email</label>
+                      <input class="form-control" type="email" name="email" id="email" placeholder="Email">
+                    </div>
+
+                    <!--wiadomość-->
+                    <div class="form-row">
+                      <label class="visuallyhidden" for="message">Wiadomość</label>
+                      <textarea class="form-control" name="message" id="message" placeholder="Wiadomość"></textarea>
+                    </div>
+                </div>
+
+
+                <!--PRAWA KOLUMNA-->
+                <div class="form-right">
+                    <!--obrazek-->
+                    <div class="form-addition"></div>
+
+                    <!--checkbox-->
+                    <div class="form-row">
+                        <label class="form-checkbox">
+                            <input type="checkbox" class="form-checkbox-input">
+                            <span class="form-checkbox-mark"></span>
+                            <span class="form-checkbox-text">
+                                Zgadzam się na przetwarzanie danych osobowych
+                            </span>
+                        </label>
+                    </div>
+
+                    <!--button-->
+                    <div class="form-row">
+                         <button type="submit" class="btn form-submit-btn">
+                             Wyślij
+                         </button>
+                        </div>
+                    </div>
+            </form>
+        </div>
+    </section>
+
+<!----------------------->
+<!--FOOTER-->
+<!----------------------->
+
+    <footer>
+        <section class="footer">
+            <div class="container">
+                <div class="footer" id="footer">
+                    <h2 class="section-title">Galeria</h2>
+                </div>
+            </div>
+        </section>
+    </footer>
 </body>
 </html>
 
