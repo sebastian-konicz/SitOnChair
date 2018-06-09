@@ -231,39 +231,103 @@ body {
 
     opacity: 0;
     transition: 0.5s all;
-    font-size: 100px;
 }
 
 .banner-slide-active {
     opacity: 1;
     z-index: 1;
+
 }
+.banner-slide-content {
+    box-sizing: border-box;
+    height: 300px;
+    width: 300px;
+    border: 2px solid black;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 25px 10px;
+    position: relative;
+}
+
 /**************************/
 /* PICTURES                */
 /**************************/
-.main-pricing{
-    background: #f1f1f1;
+
+
+
+.gallery {
+    height: 300px;
 }
 
-
-.pictures {
-    height: 250px;
+.gallery-pictures{
     display: flex;
+    justify-content: space-between;
 }
+
 
 
 /**************************/
 /* PRICING                 */
 /**************************/
+.main-pricing{
+    background: #f1f1f1;
+}
 
 .pricing {
     height: 500px;
-    display: flex;
+
+
 }
 
 .pricing-banners {
+    hight: 300px;
     border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
 }
+
+.pricing-banners-el{
+    box-sizing: border-box;
+    height: 300px;
+    width: 300px;
+    border: 2px solid black;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 25px 10px;
+    position: relative;
+    }
+
+
+.inner-circle {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: black;
+    border: 2px solid black;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+
+}
+
+.outer-circle {
+    display: block;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid black;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+
+}
+
 
 /**************************/
 /* FORM                 */
@@ -284,6 +348,7 @@ body {
     margin-bottom: 28px;
 }
 /*<!--checkbox-->*/
+
 .form-addition{
     height: 200px;
     background: url(../images/red_chair.png);
@@ -296,13 +361,13 @@ body {
     border: 1px solid var(--color);
     width: 100%;
     padding: 0 15px;
-    font-size:33px;
+    font-size: 33px;
     font-weight: 300;
     font-family: 'Raleway', sans-serif;
 }
 
 textarea.form-control {
-    height: 150px;
+    height: 190px;
     resize: none;
     padding: 15px;
 }
@@ -311,7 +376,7 @@ textarea.form-control {
     color: #cecece;;
 }
 
-.form-control:focus { /*cieniowanie ramki
+.form-control:focus { /*cieniowanie ramki*/
     outline:none;
     border-color: var(--color);
     box-shadow: inset 0 0 0 1px var(--color) /*inset - robi węwnętrzny cień*/
@@ -334,7 +399,7 @@ textarea.form-control {
 
 .form-checkbox-mark{
     display: block;
-    width:50px;
+    width: 50px;
     height: 50px;
     flex-shrink:0;
     border: 1px solid var(--color);
@@ -361,9 +426,29 @@ textarea.form-control {
 /*************************/
 
 .footer {
-    height: 40px;
+    height: 80px;
     background-color: black;
     position: relative;
-    z-index: 10000;
+
 }
 
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+
+}
+
+.footer-copy-rights {
+    width: 630px;
+    font-size: 16px;
+    color: #f1f1f1;
+}
+
+.footer-social-media {
+    width: 340px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
