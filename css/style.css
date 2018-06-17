@@ -11,8 +11,10 @@ body {
 }
 
 .container { /* kontener dla strony */
-    width: 1050px;
+    max-width: 1050px;
     margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .visuallyhidden { /* ukrywa labele */
@@ -27,18 +29,30 @@ body {
     white-space: nowrap; /* 1 */
 }
 
+.btn-link{
+     border: 0;
+    color: #fff;
+    background: var(--color);
+    padding: 10px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 7px;
+}
+
+
 .btn{
     width: auto;
     border: 0;
     color: #fff;
     background: var(--color);
-    padding: 20px 30px;
+    padding: 10px 20px;
     text-decoration: none;
     text-transform: uppercase;
     border-radius: 7px;
 }
 
 .section-title {
+    padding-top: 50px;
     color: #575757;
     font-size: 22px;
     text-transform: uppercase;
@@ -83,6 +97,9 @@ body {
     font-weight: 600;
 }
 
+.page-logo span{
+    color: var(--color);
+}
 
 .page-nav{}
 
@@ -193,7 +210,7 @@ body {
 }
 
 .banner{
-    height: 400px;
+    height: 500px;
     display: flex;
 }
 
@@ -204,6 +221,7 @@ body {
     border: 0px;
     font-size: 70px;
     color: var(--color);
+    cursor: pointer;
 }
 
 .banner-next {
@@ -236,6 +254,30 @@ body {
 
 }
 
+.banner-slide-photo {
+    box-sizing: border-box;
+    height: 300px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-slide-photo ul{
+    list-style: none;
+}
+
+.banner-slide-photo li{
+    display: none;
+
+}
+
+.banner-slide-photo .visible{
+    display: inline-block;
+
+}
+
+
 .banner-slide-active {
     opacity: 1;
     z-index: 1;
@@ -251,7 +293,7 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .banner-slide-header {
@@ -263,15 +305,19 @@ body {
     color: var(--color);
 }
 
+banner-slide-button {
+    width: 100px;
+}
+
 
 /**************************/
 /* PICTURES                */
 /**************************/
 
 
-
 .gallery {
-    height: 300px;
+    height: 350px;
+    padding-top: 30px;
 }
 
 .gallery-pictures{
@@ -289,7 +335,7 @@ body {
 }
 
 .pricing {
-    height: 700px;
+    height: 720px;
 
 }
 
@@ -303,12 +349,11 @@ body {
 .pricing-banners-el{
     box-sizing: border-box;
     height: 500px;
-    width: 300px;
-    border: 2px solid black;
+    width: 330px;
+    border: 2px solid #d8d8d8;
     background-color: #F9F9F9;
     font-family: sans-serif;
     text-align: center;
-    padding: 25px 10px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -316,14 +361,18 @@ body {
 
 }
 
+.pricing-banners-el:hover{
+    /*background-color: var(--color);*/
+}
+
 
 .pricing-banner-inner-circle {
     display: block;
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
-    background-color: black;
-    border: 2px solid black;
+    background-color: #c0c0c0;
+    border: 2px solid v;
     position: absolute;
     left: 50%;
     top: 0;
@@ -334,11 +383,11 @@ body {
 
 .pricing-banner-outer-circle {
     display: block;
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     background-color: #F9F9F9;
-    border: 2px solid black;
+    border: 2px solid #d8d8d8;
     position: absolute;
     left: 50%;
     top: 0;
@@ -350,40 +399,95 @@ body {
 
 .pricing-banner-header{
     text-transform: uppercase;
+    padding-top: 20px;
     font-weight: 300;
     color: var(--color);
 
 }
 
 .pricing-banner-prices{
-    border: 1px solid red;
-    width:100px;
-    height: 100px;
+    border: 1px solid #d8d8d8;
+    width:130px;
+    height: 130px;
     border-radius: 50%;
+    background: #ffffff;
     text-transform: uppercase;
     font-weight: 400;
     color: var(--color);
     align-self: center;
+    position: relative;
 
 }
+/*Złotówki*/
+.pricing-banner-prices span:first-child{
+    width: 50px;
+    height: 50px;
+    padding: 0px;
+    color: #c2c2c2;
+    font-size: 35px;
+    font-weight: 900;
+    font-family: Raleway, sans-serif;
+    position: absolute;
+    top: 25px;
+    left: 30px;
+
+}
+/*grosze*/
+.pricing-banner-prices span:nth-child(2){
+    color: #c2c2c2;
+    font-size: 12px;
+    font-weight: 900;
+    font-family: Raleway, sans-serif;
+    position: absolute;
+    top: 35px;
+    right: 30px;
+
+}
+/*PLN/MSC*/
+.pricing-banner-prices span:last-child{
+    color: #c2c2c2;
+    font-size: 12px;
+    font-weight: 900;
+    font-family: Raleway, sans-serif;
+    position: absolute;
+    bottom: 35px;
+    left: 35px;
+}
+
 
 .pricing-banner-scope{
-    border: 1px solid red;
     width: 100%;
-    height: 100px;
-    text-transform: uppercase;
+    height: 160px;
+    text-align: center;
+    font-family: Tahoma, sans-serif;
     font-weight: 400;
+    font-size: 22px;
     color: var(--color);
     display: flex;
     flex-direction:column;
 
 }
 
-.pricing-banner-scope-el:nth-child(2n+1){
-   background: grey;
+.pricing-banner-scope-el:nth-child(2n) {
+    background: #f1f1f1;
+    color: #8e8e8e;
+}
 
+.pricing-banner-scope-el:nth-child(2n+1) {
+    background: #e4e4e4;
+    color: #8e8e8e;
 
 }
+
+.pricing-banner-scope-el{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
 
 
 
@@ -425,7 +529,7 @@ body {
 }
 
 textarea.form-control {
-    height: 190px;
+    height: 210px;
     resize: none;
     padding: 15px;
 }
