@@ -17,6 +17,8 @@ body {
     padding-right: 10px;
 }
 
+
+
 .visuallyhidden { /* ukrywa labele */
     border: 0;
     clip: rect(0 0 0 0);
@@ -30,7 +32,7 @@ body {
 }
 
 .btn-link{
-     border: 0;
+    border: 0;
     color: #fff;
     background: var(--color);
     padding: 10px 30px;
@@ -52,12 +54,11 @@ body {
 }
 
 .section-title {
-    padding-top: 50px;
     color: #575757;
     font-size: 22px;
     text-transform: uppercase;
     position: relative;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
 
 }
 
@@ -99,6 +100,7 @@ body {
 
 .page-logo span{
     color: var(--color);
+    font-weight: 700;
 }
 
 .page-nav{}
@@ -287,26 +289,28 @@ body {
     box-sizing: border-box;
     height: 300px;
     width: 400px;
-    font-family: sans-serif;
+    font-family: "Raleway", sans-serif;
     text-align: center;
     padding: 25px 10px;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
 }
 
 .banner-slide-header {
     text-transform: uppercase;
-    font-size: 30px;
+    font-size: 40px;
 }
 
 .banner-slide-header span {
     color: var(--color);
+    font-weight: 700;
 }
 
-banner-slide-button {
-    width: 100px;
+.banner-slide-button {
+    font-size: 25px;
 }
 
 
@@ -318,13 +322,53 @@ banner-slide-button {
 .gallery {
     height: 350px;
     padding-top: 30px;
-}
-
-.gallery-pictures{
     display: flex;
     justify-content: space-between;
 }
 
+.gallery-picture-one, .gallery-picture-two{
+    width: 330px;
+    height: 225px;
+}
+
+.gallery-picture-one{
+    background-image: url("../images/box1_img.jpg");
+    background-size: cover;
+    position: relative;
+}
+
+.gallery-picture-two{
+    background-image: url("../images/box2_img.jpg");
+    background-size: cover;
+    position: relative;
+}
+
+.gallery-picture-content{
+    width: 340px;
+    height: 250px;
+    border: 1px solid #d8d8d8;
+    position: relative;
+    padding: 15px 20px;
+    font-size: 14px;
+
+}
+
+.gallery-picture-background{
+    width: 340px;
+    height: 65px;
+    background: rgba(255,255,255, 0.5);
+    position: absolute;
+    top: 150px;
+    padding: 0px 15px;
+}
+
+.gallery-picture-title{
+    font-size: 15px;
+    font-weight: 700;
+    border-bottom: 5px solid var(--color);
+    width: 140px;
+
+}
 
 
 /**************************/
@@ -339,6 +383,10 @@ banner-slide-button {
 
 }
 
+.pricing-title{
+    padding-top: 40px;
+}
+
 .pricing-banners {
     height: 500px;
     display: flex;
@@ -347,6 +395,7 @@ banner-slide-button {
 }
 
 .pricing-banners-el{
+    margin-top: 25px;
     box-sizing: border-box;
     height: 500px;
     width: 330px;
@@ -361,10 +410,6 @@ banner-slide-button {
 
 }
 
-.pricing-banners-el:hover{
-    /*background-color: var(--color);*/
-}
-
 
 .pricing-banner-inner-circle {
     display: block;
@@ -376,7 +421,7 @@ banner-slide-button {
     position: absolute;
     left: 50%;
     top: 0;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -100%);
     z-index: 2;
 
 }
@@ -391,7 +436,7 @@ banner-slide-button {
     position: absolute;
     left: 50%;
     top: 0;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -70%);
     z-index: 1;
 
 }
@@ -399,7 +444,7 @@ banner-slide-button {
 
 .pricing-banner-header{
     text-transform: uppercase;
-    padding-top: 20px;
+    font-family: "Raleway", sans-serif;
     font-weight: 300;
     color: var(--color);
 
@@ -413,7 +458,6 @@ banner-slide-button {
     background: #ffffff;
     text-transform: uppercase;
     font-weight: 400;
-    color: var(--color);
     align-self: center;
     position: relative;
 
@@ -461,7 +505,7 @@ banner-slide-button {
     text-align: center;
     font-family: Tahoma, sans-serif;
     font-weight: 400;
-    font-size: 22px;
+    font-size: 24px;
     color: var(--color);
     display: flex;
     flex-direction:column;
@@ -488,7 +532,9 @@ banner-slide-button {
 
 }
 
-
+.pricing-banner-join{
+    padding-bottom: 15px;
+}
 
 
 /**************************/
@@ -498,6 +544,11 @@ banner-slide-button {
 .form{
     display: flex;
     justify-content: space-between;
+}
+
+.contact-title {
+    padding-top: 18px;
+    margin-bottom: 50px;
 }
 
 .form-left{
