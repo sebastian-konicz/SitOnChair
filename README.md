@@ -19,7 +19,7 @@ The aim of this project was to create a fully functioning website based on the p
 [Live Demo] (https://sebastian-konicz.github.io/SitOnChair/)
 
 ## Page screenshot
-![Image](https://github.com/sebastian-konicz/SitOnChair/blob/master/assests/sitOnChair.png)
+![Image](https://github.com/sebastian-konicz/SitOnChair/blob/master/sitOnChair.png)
 
 ## Page graphic design
-![Image](https://github.com/sebastian-konicz/SitOnChair/blob/master/assests/warsztat1.png)
+![Image](https://github.com/sebastian-konicz/SitOnChair/blob/master/warsztat1.png)
