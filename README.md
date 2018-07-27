@@ -16,7 +16,7 @@ The aim of this project was to create a fully functioning website based on the p
 * JavaScript ES5
 
 ## Page
-[Live Demo] (https://sebastian-konicz.github.io/SitOnChair/)
+[Live Demo](https://sebastian-konicz.github.io/SitOnChair/)
 
 ## Page screenshot
 ![Image](https://github.com/sebastian-konicz/SitOnChair/blob/master/sitOnChair.png)
